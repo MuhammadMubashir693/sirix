@@ -1,0 +1,41 @@
+# Standalone compose file for running the frontend by itself (e.g. against a
+# separately-hosted backend). If you're running the full stack, prefer the root
+# ../docker-compose.yml instead — it wires backend, frontend, Mongo, and Redis
+# together with proper health checks, with nothing to create manually.
+services:
+  frontend:
+    build:
+      context: .
+      target: development
+    container_name: sirix-frontend
+    restart: unless-stopped
+    ports:
+      - '3000:3000'
+    env_file:
+      - .env
+    environment:
+      - VITE_API_PROXY_TARGET=${VITE_API_PROXY_TARGET:-http://localhost:5000}
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    networks:
+      - sirix-network
+
+  # Production profile: `docker compose --profile prod up frontend-prod`
+  # Serves the built app via nginx and proxies /api to the backend service.
+  frontend-prod:
+    build:
+      context: .
+      target: production
+    container_name: sirix-frontend-prod
+    restart: unless-stopped
+    ports:
+      - '8080:80'
+    profiles:
+      - prod
+    networks:
+      - sirix-network
+
+networks:
+  sirix-network:
+    name: sirix-network

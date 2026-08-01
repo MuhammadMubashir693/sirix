@@ -1,0 +1,809 @@
+# Frontend Development Prompt for Claude
+
+You are a Senior React Architect and UI/UX Engineer.
+
+You are building the frontend for a telecom carrier management platform called **Sirix**.
+
+The backend is being developed separately and exposes REST APIs. Your job is to build a production-ready frontend that integrates cleanly with those APIs.
+
+This project is being developed **module by module**, so every module should follow the same architecture, coding standards, component patterns, routing conventions, and styling system.
+
+---
+
+# Technology Stack
+
+Use:
+
+* React 19
+* Vite
+* TypeScript
+* React Router
+* TanStack Query (React Query)
+* Axios
+* Zustand for global state
+* React Hook Form
+* Zod
+* TailwindCSS
+* shadcn/ui
+* Lucide Icons
+* Recharts
+* Framer Motion
+* react-hot-toast
+* date-fns
+* ESLint
+* Prettier
+
+The project should be fully responsive.
+
+---
+
+# Folder Structure
+
+```
+src/
+
+    api/
+        auth.ts
+        dashboard.ts
+        reports.ts
+        accounting.ts
+        diagnostics.ts
+        numbering.ts
+        admin.ts
+
+    components/
+
+        ui/
+
+        common/
+
+        forms/
+
+        tables/
+
+        charts/
+
+        layout/
+
+        dialogs/
+
+    features/
+
+        auth/
+
+        dashboard/
+
+        reports/
+
+        accounting/
+
+        numbering/
+
+        diagnostics/
+
+        admin/
+
+    hooks/
+
+    layouts/
+
+    lib/
+
+    routes/
+
+    services/
+
+    store/
+
+    types/
+
+    utils/
+
+    pages/
+
+    assets/
+```
+
+Use feature-based architecture.
+
+---
+
+# Theme
+
+Modern SaaS dashboard.
+
+Appearance:
+
+* White background
+* Soft gray surfaces
+* Blue accent
+* Rounded cards
+* Beautiful spacing
+* Minimal
+* Professional
+* Fast
+
+No Bootstrap.
+
+Use only Tailwind + shadcn/ui.
+
+---
+
+# Authentication Module
+
+Pages
+
+* Login
+* Forgot Password
+* Reset Password
+* Change Password
+
+Features
+
+JWT Authentication
+
+Refresh Token handling
+
+Automatic token refresh
+
+Protected routes
+
+Public routes
+
+Remember Me
+
+Logout
+
+Session expiration handling
+
+Unauthorized redirect
+
+Axios interceptor
+
+Loading screens
+
+Error handling
+
+---
+
+# Dashboard Module
+
+Create a modern dashboard.
+
+Cards
+
+* Revenue
+* Cost
+* Profit
+* Today's Calls
+* Active Customers
+* Active Vendors
+* Active Carriers
+* Active Sessions
+
+Charts
+
+Revenue Trend
+
+Traffic Trend
+
+Profit Trend
+
+Call Volume
+
+ASR
+
+ACD
+
+Top Customers
+
+Top Vendors
+
+Top Carriers
+
+Latest Alerts
+
+Recent Activity
+
+Statistics Cards
+
+Quick Actions
+
+Live updates via Socket.io
+
+Skeleton loading
+
+---
+
+# Relationship Performance Module
+
+Pages
+
+Relationship Performance List
+
+Create
+
+Edit
+
+View
+
+Features
+
+Advanced Table
+
+Pagination
+
+Filtering
+
+Search
+
+Sorting
+
+Export CSV
+
+Export Excel
+
+Export PDF
+
+Charts
+
+Trend Graph
+
+Performance History
+
+Status Indicators
+
+Badges
+
+Drawer Details
+
+---
+
+# Numbering Module
+
+Pages
+
+Numbering List
+
+Create Prefix
+
+Edit Prefix
+
+View Prefix
+
+Fields
+
+Country
+
+Prefix
+
+Country Code
+
+Description
+
+Carrier
+
+Vendor
+
+Rate
+
+Priority
+
+Status
+
+Routing Tag
+
+Features
+
+Table
+
+Search
+
+Filtering
+
+Bulk Import
+
+Bulk Export
+
+Pagination
+
+---
+
+# Call Diagnostics Module
+
+Pages
+
+Diagnostics List
+
+Call Detail
+
+Filters
+
+Features
+
+Search
+
+Pagination
+
+Timeline
+
+Call Details
+
+SIP Messages
+
+Latency
+
+Packet Loss
+
+MOS
+
+Codec
+
+Disconnect Cause
+
+Charts
+
+Badges
+
+Colored Status
+
+Expandable Rows
+
+---
+
+# Accounting Module
+
+Pages
+
+Invoices
+
+Invoice Details
+
+Payments
+
+Carrier Payments
+
+Reports
+
+Dashboard
+
+Features
+
+Invoice Table
+
+Payment Table
+
+Status Badges
+
+Revenue Cards
+
+Expense Cards
+
+Profit Cards
+
+Date Filters
+
+Export
+
+Download Invoice PDF
+
+Payment History
+
+Outstanding Balance
+
+---
+
+# Reports Module
+
+Pages
+
+Revenue Report
+
+Customer Report
+
+Vendor Report
+
+Carrier Report
+
+Profit Report
+
+Call Report
+
+Traffic Report
+
+Relationship Performance Report
+
+Features
+
+Charts
+
+Tables
+
+Filters
+
+Export CSV
+
+Export Excel
+
+Export PDF
+
+Print
+
+Date Range Picker
+
+---
+
+# Admin Module
+
+Pages
+
+Dashboard
+
+Users
+
+Roles
+
+Permissions
+
+Settings
+
+Audit Logs
+
+Notifications
+
+API Keys
+
+Sessions
+
+Features
+
+CRUD
+
+Tables
+
+Pagination
+
+Permissions Matrix
+
+Role Assignment
+
+Activity Timeline
+
+Search
+
+Filters
+
+Confirmation Dialogs
+
+---
+
+# Shared Components
+
+Create reusable components.
+
+App Layout
+
+Sidebar
+
+Header
+
+Footer
+
+Breadcrumbs
+
+Data Table
+
+Search Box
+
+Date Picker
+
+Filter Panel
+
+Pagination
+
+Loading Spinner
+
+Skeleton
+
+Modal
+
+Drawer
+
+Confirmation Dialog
+
+Toast Notifications
+
+Status Badge
+
+Charts
+
+Statistic Cards
+
+Error Boundary
+
+404 Page
+
+Unauthorized Page
+
+Empty State
+
+---
+
+# Routing
+
+Create nested routing.
+
+```
+/
+
+login
+
+dashboard
+
+relationship-performance
+
+numbering
+
+diagnostics
+
+accounting
+
+reports
+
+admin
+
+settings
+
+profile
+```
+
+Use lazy loading.
+
+---
+
+# State Management
+
+Use Zustand.
+
+Stores
+
+Auth Store
+
+User Store
+
+Theme Store
+
+Notification Store
+
+Dashboard Store
+
+---
+
+# API Integration
+
+Create a dedicated Axios client.
+
+Implement
+
+* request interceptors
+* response interceptors
+* automatic JWT refresh
+* global error handling
+* retry strategy
+* loading state handling
+
+Use React Query for:
+
+Queries
+
+Mutations
+
+Caching
+
+Background Refetch
+
+Optimistic Updates
+
+---
+
+# Forms
+
+Use
+
+React Hook Form
+
+Zod validation
+
+Reusable Form Components
+
+Validation Messages
+
+Async Validation
+
+---
+
+# Tables
+
+All tables should support
+
+Search
+
+Filtering
+
+Sorting
+
+Pagination
+
+Column Visibility
+
+Column Resize
+
+Column Pinning
+
+Row Selection
+
+Bulk Actions
+
+Export
+
+Sticky Header
+
+Responsive Layout
+
+---
+
+# Charts
+
+Use Recharts.
+
+Include
+
+Area Charts
+
+Line Charts
+
+Bar Charts
+
+Pie Charts
+
+Donut Charts
+
+Stacked Charts
+
+Trend Charts
+
+Heat Maps (where appropriate)
+
+---
+
+# Notifications
+
+Toast Notifications
+
+Success
+
+Error
+
+Warning
+
+Info
+
+Real-time alerts
+
+---
+
+# Responsive Design
+
+Support
+
+Desktop
+
+Laptop
+
+Tablet
+
+Mobile
+
+Collapsible Sidebar
+
+Responsive Tables
+
+Responsive Cards
+
+Responsive Charts
+
+---
+
+# Accessibility
+
+Keyboard navigation
+
+ARIA labels
+
+Focus states
+
+Semantic HTML
+
+Color contrast compliance
+
+---
+
+# Error Handling
+
+404 Page
+
+500 Page
+
+Unauthorized Page
+
+Network Error Screen
+
+Offline Indicator
+
+Retry Buttons
+
+Global Error Boundary
+
+---
+
+# Performance
+
+Lazy Loading
+
+Route Splitting
+
+Memoization
+
+Virtualized Tables
+
+Optimized Rendering
+
+Image Optimization
+
+Prefetching
+
+---
+
+# Code Quality
+
+TypeScript everywhere.
+
+No use of any.
+
+Reusable components.
+
+Reusable hooks.
+
+No duplicated code.
+
+Consistent naming.
+
+Clean architecture.
+
+Proper comments where necessary.
+
+---
+
+# Deliverables
+
+Generate the frontend **module by module**.
+
+Each module must include:
+
+* Complete folder structure
+* Pages
+* Components
+* API integration
+* Types
+* Hooks
+* Zustand stores (if needed)
+* React Query hooks
+* Form validation
+* Tailwind styling
+* Responsive layout
+* Error handling
+* Loading states
+* Routing updates
+* Unit-test-ready component structure
+
+Do not regenerate previous modules unless required. Maintain consistency with the existing Sirix codebase and ensure every module integrates seamlessly with the backend REST API.

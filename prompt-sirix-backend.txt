@@ -1,0 +1,544 @@
+You are a senior software architect.
+
+Generate a COMPLETE production-ready backend for a telecom carrier management platform.
+
+Tech Stack
+==========
+
+Backend
+- Node.js
+- Express.js
+- MongoDB using Mongoose
+- JWT Authentication
+- Refresh Tokens
+- Role Based Access Control (RBAC)
+- REST API
+- Socket.io for live dashboard updates
+- Winston logging
+- Swagger/OpenAPI documentation
+- Jest tests
+- Docker support
+- Docker Compose
+- ESLint + Prettier
+- Environment variables
+- MVC Architecture
+- Repository Pattern
+- Service Layer
+- Validation using Zod
+- Redis for caching and sessions
+- BullMQ for background jobs
+- MongoDB Transactions where appropriate
+
+Folder Structure
+================
+
+Create a clean scalable architecture
+
+src/
+    config/
+    controllers/
+    services/
+    repositories/
+    middleware/
+    routes/
+    validators/
+    models/
+    jobs/
+    sockets/
+    utils/
+    docs/
+    tests/
+
+Database
+=========
+
+Use MongoDB.
+
+Create Mongoose schemas for:
+
+User
+Role
+Permission
+
+Carrier
+Vendor
+Customer
+
+NumberingPlan
+
+CallRecord
+
+RelationshipPerformance
+
+Invoice
+
+Payment
+
+CarrierPayment
+
+AuditLog
+
+Notification
+
+RefreshToken
+
+DashboardCache
+
+Each schema should include:
+
+- timestamps
+- indexes
+- validation
+- relationships
+- soft delete
+- createdBy
+- updatedBy
+
+Authentication
+==============
+
+Implement
+
+POST /auth/register
+
+POST /auth/login
+
+POST /auth/logout
+
+POST /auth/refresh
+
+POST /auth/change-password
+
+POST /auth/forgot-password
+
+POST /auth/reset-password
+
+GET /auth/me
+
+JWT Access Token
+
+JWT Refresh Token
+
+Role Based Permissions
+
+Admin
+
+Manager
+
+Accounting
+
+Operations
+
+Viewer
+
+Dashboard
+=========
+
+Dashboard APIs
+
+GET /dashboard/summary
+
+Return
+
+Total Customers
+
+Total Vendors
+
+Total Carriers
+
+Today's Calls
+
+ASR
+
+ACD
+
+Revenue
+
+Cost
+
+Profit
+
+Recent Alerts
+
+Top Customers
+
+Top Vendors
+
+Charts
+
+Call volume
+
+Revenue
+
+Profit
+
+Relationship Performance
+========================
+
+CRUD
+
+GET /relationship-performance
+
+POST /relationship-performance
+
+PUT /relationship-performance/:id
+
+DELETE /relationship-performance/:id
+
+Should store
+
+Carrier
+
+Vendor
+
+Customer
+
+ASR
+
+ACD
+
+PDD
+
+NER
+
+Answer Ratio
+
+Success Rate
+
+Latency
+
+MOS
+
+Packet Loss
+
+Trend
+
+Daily Stats
+
+Weekly Stats
+
+Monthly Stats
+
+Numbering
+=========
+
+CRUD
+
+GET /numbering
+
+POST /numbering
+
+PUT /numbering/:id
+
+DELETE /numbering/:id
+
+Fields
+
+Country
+
+Prefix
+
+Country Code
+
+Description
+
+Carrier
+
+Vendor
+
+Rate
+
+Enabled
+
+Priority
+
+Routing Tag
+
+Call Diagnostics
+================
+
+CRUD
+
+GET /diagnostics
+
+POST /diagnostics
+
+GET /diagnostics/:id
+
+Features
+
+Store
+
+Call ID
+
+ANI
+
+DNIS
+
+Duration
+
+Disconnect Cause
+
+SIP Codes
+
+Codec
+
+MOS
+
+Latency
+
+Packet Loss
+
+Jitter
+
+Route Used
+
+Carrier
+
+Vendor
+
+Customer
+
+Search
+
+Filtering
+
+Pagination
+
+Accounting
+==========
+
+Invoices
+
+GET /invoices
+
+POST /invoices
+
+PUT /invoices/:id
+
+DELETE /invoices/:id
+
+Generate invoice PDFs
+
+Invoice Status
+
+Paid
+
+Pending
+
+Cancelled
+
+Send Payments
+
+GET /payments
+
+POST /payments
+
+PUT /payments/:id
+
+DELETE /payments/:id
+
+Carrier Payments
+
+GET /carrier-payments
+
+POST /carrier-payments
+
+PUT /carrier-payments/:id
+
+DELETE /carrier-payments/:id
+
+Accounting Dashboard
+
+Revenue
+
+Expenses
+
+Profit
+
+Outstanding Invoices
+
+Pending Payments
+
+Admin Panel
+===========
+
+Users CRUD
+
+Roles CRUD
+
+Permissions CRUD
+
+Audit Logs
+
+System Settings
+
+Notification Management
+
+API Key Management
+
+Dashboard Settings
+
+Activity Logs
+
+User Sessions
+
+Reports
+=======
+
+Generate endpoints for
+
+Revenue Report
+
+Profit Report
+
+Customer Report
+
+Carrier Report
+
+Vendor Report
+
+Call Report
+
+ASR Report
+
+ACD Report
+
+Traffic Report
+
+Payments Report
+
+Invoices Report
+
+Relationship Performance Report
+
+Support
+
+Filtering
+
+Date Range
+
+Export CSV
+
+Export Excel
+
+Export PDF
+
+Pagination
+
+Sorting
+
+Search
+
+Common Features
+===============
+
+Every endpoint should include
+
+Validation
+
+Error handling
+
+Authentication
+
+Authorization
+
+Pagination
+
+Sorting
+
+Filtering
+
+Searching
+
+Audit logging
+
+Swagger Documentation
+
+Response format
+
+{
+    success,
+    message,
+    data,
+    pagination,
+    errors
+}
+
+Security
+========
+
+Helmet
+
+Rate Limiter
+
+CORS
+
+Input Sanitization
+
+Mongo Injection Protection
+
+XSS Protection
+
+Password Hashing (bcrypt)
+
+JWT Authentication
+
+Refresh Tokens
+
+Request Logging
+
+Performance
+===========
+
+Redis Caching
+
+Aggregation Pipelines
+
+MongoDB Indexes
+
+Compression
+
+Lazy Loading
+
+Queue System
+
+Swagger
+=======
+
+Generate complete OpenAPI documentation.
+
+Testing
+=======
+
+Generate Jest tests for
+
+Controllers
+
+Services
+
+Authentication
+
+Middleware
+
+Project Output
+==============
+
+Generate ALL source code.
+
+Do not provide explanations.
+
+Generate every file completely.
+
+Ensure the project runs immediately using:
+
+docker-compose up
+
+and
+
+npm install
+npm run dev
+
+The backend should expose clean REST APIs that can be integrated later with React, Vue, Angular, or any frontend.
+
+Generate the project module by module (authentication → admin → dashboard → diagnostics → accounting → reports), while maintaining a shared architecture instead of everything in a single response.

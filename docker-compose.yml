@@ -1,0 +1,93 @@
+services:
+  mongo:
+    image: mongo:latest
+    container_name: sirix-mongo
+    restart: unless-stopped
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongo_data:/data/db
+    healthcheck:
+      test: ['CMD', 'mongosh', '--eval', "db.adminCommand('ping')"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+    networks:
+      - sirix-network
+
+  redis:
+    image: redis:latest
+    container_name: sirix-redis
+    restart: unless-stopped
+    ports:
+      - '6379:6379'
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ['CMD', 'redis-cli', 'ping']
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 5s
+    networks:
+      - sirix-network
+
+  backend:
+    build: ./backend
+    container_name: sirix-backend
+    restart: unless-stopped
+    ports:
+      - '5000:5000'
+    env_file:
+      - ./backend/.env
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/sirix
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    depends_on:
+      mongo:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ['CMD', 'wget', '-qO-', 'http://localhost:5000/health']
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 15s
+    volumes:
+      - ./backend:/usr/src/app
+      - /usr/src/app/node_modules
+    command: npm run dev
+    networks:
+      - sirix-network
+
+  frontend:
+    build:
+      context: ./frontend
+      target: development
+    container_name: sirix-frontend
+    restart: unless-stopped
+    ports:
+      - '3000:3000'
+    env_file:
+      - ./frontend/.env
+    environment:
+      - VITE_API_PROXY_TARGET=http://backend:5000
+    depends_on:
+      backend:
+        condition: service_healthy
+    volumes:
+      - ./frontend:/usr/src/app
+      - /usr/src/app/node_modules
+    networks:
+      - sirix-network
+
+volumes:
+  mongo_data:
+  redis_data:
+
+networks:
+  sirix-network:
+    name: sirix-network

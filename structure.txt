@@ -1,0 +1,548 @@
+.:
+total 40K
+drwxr-xr-x 4 mubashir mubashir 4.0K Wed Jul-22-2026 17:44 .
+drwxrwxr-x 4 mubashir mubashir 4.0K Wed Jul-22-2026 17:29 ..
+-rw-r--r-- 1 mubashir mubashir 3.5K Mon Jul-20-2026 13:04 README.md
+drwxr-xr-x 4 mubashir mubashir 4.0K Tue Jul-21-2026 19:32 backend
+-rw-r--r-- 1 mubashir mubashir 2.0K Mon Jul-20-2026 12:59 docker-compose.yml
+drwxr-xr-x 5 mubashir mubashir 4.0K Tue Jul-21-2026 19:32 frontend
+-rw-rw-r-- 1 mubashir mubashir 4.9K Sat Jul-18-2026 17:58 prompt-sirix-backend.txt
+-rw-rw-r-- 1 mubashir mubashir 6.8K Sun Jul-19-2026 13:16 prompt-sirix-frontend.txt
+-rw-rw-r-- 1 mubashir mubashir    0 Wed Jul-22-2026 17:44 structure.txt
+
+./backend:
+total 412K
+drwxr-xr-x  4 mubashir mubashir 4.0K Tue Jul-21-2026 19:32 .
+drwxr-xr-x  4 mubashir mubashir 4.0K Wed Jul-22-2026 17:44 ..
+-rw-r--r--  1 mubashir mubashir   68 Mon Jul-20-2026 13:00 .dockerignore
+-rw-r--r--  1 mubashir mubashir  727 Mon Jul-20-2026 13:05 .env
+-rw-r--r--  1 mubashir mubashir  727 Mon Jul-20-2026 12:59 .env.example
+-rw-r--r--  1 mubashir mubashir  307 Mon Jul-20-2026 12:59 .eslintrc.json
+-rw-r--r--  1 mubashir mubashir  106 Mon Jul-20-2026 12:59 .prettierrc
+-rw-r--r--  1 mubashir mubashir  144 Mon Jul-20-2026 13:07 Dockerfile
+-rw-r--r--  1 mubashir mubashir 7.4K Tue Jul-21-2026 12:19 README.md
+-rw-r--r--  1 mubashir mubashir 1.6K Mon Jul-20-2026 13:00 docker-compose.yml
+-rw-r--r--  1 mubashir mubashir  205 Mon Jul-20-2026 12:59 jest.config.js
+drwxr-xr-x  2 root     root     4.0K Tue Jul-21-2026 19:32 node_modules
+-rw-r--r--  1 mubashir mubashir 352K Tue Jul-21-2026 12:08 package-lock.json
+-rw-r--r--  1 mubashir mubashir 1.5K Mon Jul-20-2026 12:59 package.json
+drwxr-xr-x 15 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 src
+
+./backend/node_modules:
+total 8.0K
+drwxr-xr-x 2 root     root     4.0K Tue Jul-21-2026 19:32 .
+drwxr-xr-x 4 mubashir mubashir 4.0K Tue Jul-21-2026 19:32 ..
+
+./backend/src:
+total 68K
+drwxr-xr-x 15 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x  4 mubashir mubashir 4.0K Tue Jul-21-2026 19:32 ..
+-rw-r--r--  1 mubashir mubashir 1.9K Mon Jul-20-2026 12:59 app.js
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 config
+drwxr-xr-x  2 mubashir mubashir 4.0K Wed Jul-22-2026 17:38 controllers
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 docs
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 jobs
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 middleware
+drwxr-xr-x  3 mubashir mubashir 4.0K Mon Jul-20-2026 22:27 models
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 22:27 repositories
+drwxr-xr-x  2 mubashir mubashir 4.0K Wed Jul-22-2026 17:41 routes
+-rw-r--r--  1 mubashir mubashir 1.4K Mon Jul-20-2026 12:59 server.js
+drwxr-xr-x  2 mubashir mubashir 4.0K Wed Jul-22-2026 17:38 services
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 sockets
+drwxr-xr-x  5 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 tests
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 utils
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 22:28 validators
+
+./backend/src/config:
+total 28K
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 15 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+-rw-r--r--  1 mubashir mubashir  839 Mon Jul-20-2026 12:59 database.js
+-rw-r--r--  1 mubashir mubashir 1.8K Mon Jul-20-2026 12:59 env.js
+-rw-r--r--  1 mubashir mubashir 1023 Mon Jul-20-2026 12:59 logger.js
+-rw-r--r--  1 mubashir mubashir  552 Mon Jul-20-2026 12:59 redis.js
+-rw-r--r--  1 mubashir mubashir 1.1K Mon Jul-20-2026 12:59 swagger.js
+
+./backend/src/controllers:
+total 44K
+drwxr-xr-x  2 mubashir mubashir 4.0K Wed Jul-22-2026 17:38 .
+drwxr-xr-x 15 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+-rw-r--r--  1 mubashir mubashir 1.6K Mon Jul-20-2026 22:28 adminUserController.js
+-rw-r--r--  1 mubashir mubashir  639 Tue Jul-21-2026 12:07 auditLogController.js
+-rw-r--r--  1 mubashir mubashir 3.1K Mon Jul-20-2026 12:59 authController.js
+-rw-rw-r--  1 mubashir mubashir  430 Wed Jul-22-2026 17:33 dashboardController.js
+-rw-rw-r--  1 mubashir mubashir  688 Wed Jul-22-2026 17:38 diagnosticsController.js
+-rw-r--r--  1 mubashir mubashir 1.4K Tue Jul-21-2026 12:07 permissionController.js
+-rw-r--r--  1 mubashir mubashir 1.3K Tue Jul-21-2026 12:06 roleController.js
+-rw-r--r--  1 mubashir mubashir  842 Tue Jul-21-2026 12:07 sessionController.js
+-rw-r--r--  1 mubashir mubashir 1.4K Tue Jul-21-2026 12:07 settingController.js
+
+./backend/src/docs:
+total 8.0K
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 15 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+
+./backend/src/jobs:
+total 8.0K
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 15 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+
+./backend/src/middleware:
+total 36K
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 15 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+-rw-r--r--  1 mubashir mubashir  789 Mon Jul-20-2026 12:59 auditLogger.js
+-rw-r--r--  1 mubashir mubashir 1.2K Mon Jul-20-2026 12:59 authenticate.js
+-rw-r--r--  1 mubashir mubashir 1.3K Mon Jul-20-2026 12:59 authorize.js
+-rw-r--r--  1 mubashir mubashir 1.6K Mon Jul-20-2026 12:59 errorHandler.js
+-rw-r--r--  1 mubashir mubashir  194 Mon Jul-20-2026 12:59 notFound.js
+-rw-r--r--  1 mubashir mubashir  849 Mon Jul-20-2026 12:59 rateLimiter.js
+-rw-r--r--  1 mubashir mubashir 1.2K Mon Jul-20-2026 12:59 validate.js
+
+./backend/src/models:
+total 40K
+drwxr-xr-x  3 mubashir mubashir 4.0K Mon Jul-20-2026 22:27 .
+drwxr-xr-x 15 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+-rw-r--r--  1 mubashir mubashir  785 Mon Jul-20-2026 12:59 AuditLog.js
+-rw-r--r--  1 mubashir mubashir  749 Mon Jul-20-2026 12:59 Permission.js
+-rw-r--r--  1 mubashir mubashir  656 Mon Jul-20-2026 12:59 RefreshToken.js
+-rw-r--r--  1 mubashir mubashir  644 Mon Jul-20-2026 12:59 Role.js
+-rw-r--r--  1 mubashir mubashir  955 Mon Jul-20-2026 22:27 Setting.js
+-rw-r--r--  1 mubashir mubashir 1.7K Mon Jul-20-2026 12:59 User.js
+-rw-r--r--  1 mubashir mubashir  615 Mon Jul-20-2026 22:27 index.js
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 plugins
+
+./backend/src/models/plugins:
+total 12K
+drwxr-xr-x 2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 3 mubashir mubashir 4.0K Mon Jul-20-2026 22:27 ..
+-rw-r--r-- 1 mubashir mubashir 1.4K Mon Jul-20-2026 12:59 auditable.js
+
+./backend/src/repositories:
+total 36K
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 22:27 .
+drwxr-xr-x 15 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+-rw-r--r--  1 mubashir mubashir 1.4K Mon Jul-20-2026 12:59 BaseRepository.js
+-rw-r--r--  1 mubashir mubashir 1021 Mon Jul-20-2026 22:27 auditLogRepository.js
+-rw-r--r--  1 mubashir mubashir  420 Mon Jul-20-2026 22:27 permissionRepository.js
+-rw-r--r--  1 mubashir mubashir  665 Mon Jul-20-2026 12:59 refreshTokenRepository.js
+-rw-r--r--  1 mubashir mubashir  490 Mon Jul-20-2026 22:27 roleRepository.js
+-rw-r--r--  1 mubashir mubashir  727 Mon Jul-20-2026 22:27 settingRepository.js
+-rw-r--r--  1 mubashir mubashir  832 Mon Jul-20-2026 12:59 userRepository.js
+
+./backend/src/routes:
+total 36K
+drwxr-xr-x  2 mubashir mubashir 4.0K Wed Jul-22-2026 17:41 .
+drwxr-xr-x 15 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+-rw-r--r--  1 mubashir mubashir  12K Tue Jul-21-2026 12:07 adminRoutes.js
+-rw-r--r--  1 mubashir mubashir 3.3K Mon Jul-20-2026 12:59 authRoutes.js
+-rw-rw-r--  1 mubashir mubashir  412 Wed Jul-22-2026 17:33 dashboardRoutes.js
+-rw-rw-r--  1 mubashir mubashir  499 Wed Jul-22-2026 17:38 diagnosticsRoutes.js
+-rw-rw-r--  1 mubashir mubashir  456 Wed Jul-22-2026 17:41 index.js
+
+./backend/src/services:
+total 48K
+drwxr-xr-x  2 mubashir mubashir 4.0K Wed Jul-22-2026 17:38 .
+drwxr-xr-x 15 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+-rw-r--r--  1 mubashir mubashir 3.7K Mon Jul-20-2026 22:28 adminUserService.js
+-rw-r--r--  1 mubashir mubashir  851 Mon Jul-20-2026 22:28 auditLogService.js
+-rw-r--r--  1 mubashir mubashir 6.4K Mon Jul-20-2026 12:59 authService.js
+-rw-rw-r--  1 mubashir mubashir 1.8K Wed Jul-22-2026 17:32 dashboardService.js
+-rw-rw-r--  1 mubashir mubashir 3.0K Wed Jul-22-2026 17:37 diagnosticsService.js
+-rw-r--r--  1 mubashir mubashir 1.9K Mon Jul-20-2026 22:28 permissionService.js
+-rw-r--r--  1 mubashir mubashir 2.6K Mon Jul-20-2026 22:28 roleService.js
+-rw-r--r--  1 mubashir mubashir 1.3K Mon Jul-20-2026 22:28 sessionService.js
+-rw-r--r--  1 mubashir mubashir 1.1K Mon Jul-20-2026 22:28 settingService.js
+
+./backend/src/sockets:
+total 12K
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 15 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+-rw-r--r--  1 mubashir mubashir 1.2K Mon Jul-20-2026 12:59 index.js
+
+./backend/src/tests:
+total 24K
+drwxr-xr-x  5 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 15 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 helpers
+drwxr-xr-x  2 mubashir mubashir 4.0K Tue Jul-21-2026 12:08 integration
+-rw-r--r--  1 mubashir mubashir  764 Mon Jul-20-2026 12:59 setup.js
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 unit
+
+./backend/src/tests/helpers:
+total 12K
+drwxr-xr-x 2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 5 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+-rw-r--r-- 1 mubashir mubashir  868 Mon Jul-20-2026 12:59 seedTestData.js
+
+./backend/src/tests/integration:
+total 28K
+drwxr-xr-x 2 mubashir mubashir 4.0K Tue Jul-21-2026 12:08 .
+drwxr-xr-x 5 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+-rw-r--r-- 1 mubashir mubashir  11K Tue Jul-21-2026 12:08 admin.test.js
+-rw-r--r-- 1 mubashir mubashir 6.5K Mon Jul-20-2026 13:04 auth.test.js
+
+./backend/src/tests/unit:
+total 8.0K
+drwxr-xr-x 2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 5 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+
+./backend/src/utils:
+total 32K
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 15 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+-rw-r--r--  1 mubashir mubashir 1011 Mon Jul-20-2026 13:05 ApiError.js
+-rw-r--r--  1 mubashir mubashir  654 Mon Jul-20-2026 12:59 apiResponse.js
+-rw-r--r--  1 mubashir mubashir  286 Mon Jul-20-2026 12:59 asyncHandler.js
+-rw-r--r--  1 mubashir mubashir  864 Mon Jul-20-2026 12:59 pagination.js
+-rw-r--r--  1 mubashir mubashir 2.9K Tue Jul-21-2026 12:07 seed.js
+-rw-r--r--  1 mubashir mubashir  981 Mon Jul-20-2026 12:59 token.js
+
+./backend/src/validators:
+total 16K
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 22:28 .
+drwxr-xr-x 15 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+-rw-r--r--  1 mubashir mubashir 3.9K Mon Jul-20-2026 22:28 adminValidators.js
+-rw-r--r--  1 mubashir mubashir 1.3K Mon Jul-20-2026 12:59 authValidators.js
+
+./frontend:
+total 280K
+drwxr-xr-x  5 mubashir mubashir 4.0K Tue Jul-21-2026 19:32 .
+drwxr-xr-x  4 mubashir mubashir 4.0K Wed Jul-22-2026 17:44 ..
+-rw-r--r--  1 mubashir mubashir   62 Mon Jul-20-2026 13:00 .dockerignore
+-rw-r--r--  1 mubashir mubashir  395 Mon Jul-20-2026 13:05 .env
+-rw-r--r--  1 mubashir mubashir  395 Mon Jul-20-2026 12:59 .env.example
+-rw-r--r--  1 mubashir mubashir  245 Mon Jul-20-2026 12:59 .oxlintrc.json
+-rw-r--r--  1 mubashir mubashir  106 Mon Jul-20-2026 12:59 .prettierrc
+-rw-r--r--  1 mubashir mubashir  550 Mon Jul-20-2026 13:07 Dockerfile
+-rw-r--r--  1 mubashir mubashir 5.6K Tue Jul-21-2026 12:18 README.md
+-rw-r--r--  1 mubashir mubashir 1.2K Mon Jul-20-2026 12:59 docker-compose.yml
+-rw-r--r--  1 mubashir mubashir 1017 Mon Jul-20-2026 12:59 eslint.config.js
+-rw-r--r--  1 mubashir mubashir  818 Mon Jul-20-2026 12:59 index.html
+-rw-r--r--  1 mubashir mubashir 1019 Mon Jul-20-2026 12:59 nginx.conf
+drwxr-xr-x  2 root     root     4.0K Tue Jul-21-2026 19:32 node_modules
+-rw-r--r--  1 mubashir mubashir 192K Tue Jul-21-2026 12:17 package-lock.json
+-rw-r--r--  1 mubashir mubashir 2.0K Mon Jul-20-2026 12:59 package.json
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 public
+drwxr-xr-x 15 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 src
+-rw-r--r--  1 mubashir mubashir  702 Mon Jul-20-2026 12:59 tsconfig.app.json
+-rw-r--r--  1 mubashir mubashir  119 Mon Jul-20-2026 12:59 tsconfig.json
+-rw-r--r--  1 mubashir mubashir  558 Mon Jul-20-2026 12:59 tsconfig.node.json
+-rw-r--r--  1 mubashir mubashir  537 Mon Jul-20-2026 12:59 vite.config.ts
+
+./frontend/node_modules:
+total 8.0K
+drwxr-xr-x 2 root     root     4.0K Tue Jul-21-2026 19:32 .
+drwxr-xr-x 5 mubashir mubashir 4.0K Tue Jul-21-2026 19:32 ..
+
+./frontend/public:
+total 20K
+drwxr-xr-x 2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 5 mubashir mubashir 4.0K Tue Jul-21-2026 19:32 ..
+-rw-r--r-- 1 mubashir mubashir  350 Mon Jul-20-2026 12:59 favicon.svg
+-rw-r--r-- 1 mubashir mubashir 5.0K Mon Jul-20-2026 12:59 icons.svg
+
+./frontend/src:
+total 76K
+drwxr-xr-x 15 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x  5 mubashir mubashir 4.0K Tue Jul-21-2026 19:32 ..
+-rw-r--r--  1 mubashir mubashir 1.4K Mon Jul-20-2026 12:59 App.tsx
+drwxr-xr-x  2 mubashir mubashir 4.0K Wed Jul-22-2026 17:39 api
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 assets
+drwxr-xr-x  9 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 components
+drwxr-xr-x  9 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 features
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 hooks
+-rw-r--r--  1 mubashir mubashir 2.5K Mon Jul-20-2026 12:59 index.css
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 layouts
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 lib
+-rw-r--r--  1 mubashir mubashir  530 Mon Jul-20-2026 12:59 main.tsx
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 pages
+drwxr-xr-x  2 mubashir mubashir 4.0K Wed Jul-22-2026 17:42 routes
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 services
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 store
+drwxr-xr-x  2 mubashir mubashir 4.0K Tue Jul-21-2026 12:11 types
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 utils
+-rw-r--r--  1 mubashir mubashir  198 Mon Jul-20-2026 12:59 vite-env.d.ts
+
+./frontend/src/api:
+total 24K
+drwxr-xr-x  2 mubashir mubashir 4.0K Wed Jul-22-2026 17:39 .
+drwxr-xr-x 15 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+-rw-r--r--  1 mubashir mubashir 3.9K Tue Jul-21-2026 12:11 admin.ts
+-rw-r--r--  1 mubashir mubashir 1.3K Mon Jul-20-2026 12:59 auth.ts
+-rw-rw-r--  1 mubashir mubashir  711 Wed Jul-22-2026 17:34 dashboard.ts
+-rw-rw-r--  1 mubashir mubashir 1018 Wed Jul-22-2026 17:39 diagnostics.ts
+
+./frontend/src/assets:
+total 36K
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 15 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+-rw-r--r--  1 mubashir mubashir  13K Mon Jul-20-2026 12:59 hero.png
+-rw-r--r--  1 mubashir mubashir 8.6K Mon Jul-20-2026 12:59 vite.svg
+
+./frontend/src/components:
+total 36K
+drwxr-xr-x  9 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 15 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 charts
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 common
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 dialogs
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 forms
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 layout
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 tables
+drwxr-xr-x  2 mubashir mubashir 4.0K Tue Jul-21-2026 12:11 ui
+
+./frontend/src/components/charts:
+total 8.0K
+drwxr-xr-x 2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 9 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+
+./frontend/src/components/common:
+total 24K
+drwxr-xr-x 2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 9 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+-rw-r--r-- 1 mubashir mubashir 1.6K Mon Jul-20-2026 12:59 ErrorBoundary.tsx
+-rw-r--r-- 1 mubashir mubashir  857 Mon Jul-20-2026 12:59 LoadingSpinner.tsx
+-rw-r--r-- 1 mubashir mubashir 1.5K Mon Jul-20-2026 12:59 NetworkStatus.tsx
+-rw-r--r-- 1 mubashir mubashir 1.3K Mon Jul-20-2026 12:59 StatusPage.tsx
+
+./frontend/src/components/dialogs:
+total 8.0K
+drwxr-xr-x 2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 9 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+
+./frontend/src/components/forms:
+total 16K
+drwxr-xr-x 2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 9 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+-rw-r--r-- 1 mubashir mubashir  849 Mon Jul-20-2026 12:59 FormField.tsx
+-rw-r--r-- 1 mubashir mubashir 1006 Mon Jul-20-2026 12:59 PasswordInput.tsx
+
+./frontend/src/components/layout:
+total 16K
+drwxr-xr-x 2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 9 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+-rw-r--r-- 1 mubashir mubashir 3.5K Mon Jul-20-2026 12:59 Header.tsx
+-rw-r--r-- 1 mubashir mubashir 3.8K Tue Jul-21-2026 12:16 Sidebar.tsx
+
+./frontend/src/components/tables:
+total 8.0K
+drwxr-xr-x 2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 9 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+
+./frontend/src/components/ui:
+total 44K
+drwxr-xr-x 2 mubashir mubashir 4.0K Tue Jul-21-2026 12:11 .
+drwxr-xr-x 9 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+-rw-r--r-- 1 mubashir mubashir  906 Tue Jul-21-2026 12:11 badge.tsx
+-rw-r--r-- 1 mubashir mubashir 2.0K Mon Jul-20-2026 12:59 button.tsx
+-rw-r--r-- 1 mubashir mubashir 1.9K Mon Jul-20-2026 12:59 card.tsx
+-rw-r--r-- 1 mubashir mubashir 3.1K Tue Jul-21-2026 12:10 dialog.tsx
+-rw-r--r-- 1 mubashir mubashir 1009 Mon Jul-20-2026 12:59 input.tsx
+-rw-r--r-- 1 mubashir mubashir  591 Mon Jul-20-2026 12:59 label.tsx
+-rw-r--r-- 1 mubashir mubashir 3.1K Tue Jul-21-2026 12:11 select.tsx
+-rw-r--r-- 1 mubashir mubashir 1.3K Tue Jul-21-2026 12:11 switch.tsx
+-rw-r--r-- 1 mubashir mubashir 1021 Tue Jul-21-2026 12:11 textarea.tsx
+
+./frontend/src/features:
+total 36K
+drwxr-xr-x  9 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 15 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 accounting
+drwxr-xr-x  5 mubashir mubashir 4.0K Tue Jul-21-2026 12:13 admin
+drwxr-xr-x  5 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 auth
+drwxr-xr-x  4 mubashir mubashir 4.0K Wed Jul-22-2026 17:36 dashboard
+drwxr-xr-x  4 mubashir mubashir 4.0K Wed Jul-22-2026 17:40 diagnostics
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 numbering
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 reports
+
+./frontend/src/features/accounting:
+total 8.0K
+drwxr-xr-x 2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 9 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+
+./frontend/src/features/admin:
+total 24K
+drwxr-xr-x 5 mubashir mubashir 4.0K Tue Jul-21-2026 12:13 .
+drwxr-xr-x 9 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+drwxr-xr-x 2 mubashir mubashir 4.0K Tue Jul-21-2026 12:15 components
+drwxr-xr-x 2 mubashir mubashir 4.0K Tue Jul-21-2026 12:12 hooks
+drwxr-xr-x 2 mubashir mubashir 4.0K Tue Jul-21-2026 12:15 pages
+-rw-r--r-- 1 mubashir mubashir 2.1K Tue Jul-21-2026 12:17 schemas.ts
+
+./frontend/src/features/admin/components:
+total 44K
+drwxr-xr-x 2 mubashir mubashir 4.0K Tue Jul-21-2026 12:15 .
+drwxr-xr-x 5 mubashir mubashir 4.0K Tue Jul-21-2026 12:13 ..
+-rw-r--r-- 1 mubashir mubashir 1.5K Tue Jul-21-2026 12:13 ConfirmDialog.tsx
+-rw-r--r-- 1 mubashir mubashir 1.4K Tue Jul-21-2026 12:12 PaginationControl.tsx
+-rw-r--r-- 1 mubashir mubashir 3.6K Tue Jul-21-2026 12:14 PermissionFormDialog.tsx
+-rw-r--r-- 1 mubashir mubashir 5.3K Tue Jul-21-2026 12:14 RoleFormDialog.tsx
+-rw-r--r-- 1 mubashir mubashir 6.3K Tue Jul-21-2026 12:15 SettingFormDialog.tsx
+-rw-r--r-- 1 mubashir mubashir 5.2K Tue Jul-21-2026 12:13 UserFormDialog.tsx
+
+./frontend/src/features/admin/hooks:
+total 32K
+drwxr-xr-x 2 mubashir mubashir 4.0K Tue Jul-21-2026 12:12 .
+drwxr-xr-x 5 mubashir mubashir 4.0K Tue Jul-21-2026 12:13 ..
+-rw-r--r-- 1 mubashir mubashir 2.6K Tue Jul-21-2026 12:12 useAdminUsers.ts
+-rw-r--r-- 1 mubashir mubashir  426 Tue Jul-21-2026 12:12 useAuditLogs.ts
+-rw-r--r-- 1 mubashir mubashir 1.9K Tue Jul-21-2026 12:12 usePermissions.ts
+-rw-r--r-- 1 mubashir mubashir 1.7K Tue Jul-21-2026 12:12 useRoles.ts
+-rw-r--r-- 1 mubashir mubashir 1.4K Tue Jul-21-2026 12:12 useSessions.ts
+-rw-r--r-- 1 mubashir mubashir 1.4K Tue Jul-21-2026 12:12 useSettings.ts
+
+./frontend/src/features/admin/pages:
+total 56K
+drwxr-xr-x 2 mubashir mubashir 4.0K Tue Jul-21-2026 12:15 .
+drwxr-xr-x 5 mubashir mubashir 4.0K Tue Jul-21-2026 12:13 ..
+-rw-r--r-- 1 mubashir mubashir 4.2K Tue Jul-21-2026 12:15 AdminAuditLogsPage.tsx
+-rw-r--r-- 1 mubashir mubashir 1.6K Tue Jul-21-2026 12:13 AdminLayout.tsx
+-rw-r--r-- 1 mubashir mubashir 3.4K Tue Jul-21-2026 12:14 AdminPermissionsPage.tsx
+-rw-r--r-- 1 mubashir mubashir 4.5K Tue Jul-21-2026 12:14 AdminRolesPage.tsx
+-rw-r--r-- 1 mubashir mubashir 4.1K Tue Jul-21-2026 12:15 AdminSessionsPage.tsx
+-rw-r--r-- 1 mubashir mubashir 4.6K Tue Jul-21-2026 12:15 AdminSettingsPage.tsx
+-rw-r--r-- 1 mubashir mubashir 6.3K Tue Jul-21-2026 12:13 AdminUsersPage.tsx
+
+./frontend/src/features/auth:
+total 24K
+drwxr-xr-x 5 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 9 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+drwxr-xr-x 2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 components
+drwxr-xr-x 2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 hooks
+drwxr-xr-x 2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 pages
+-rw-r--r-- 1 mubashir mubashir 2.2K Mon Jul-20-2026 12:59 schemas.ts
+
+./frontend/src/features/auth/components:
+total 8.0K
+drwxr-xr-x 2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 5 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+
+./frontend/src/features/auth/hooks:
+total 12K
+drwxr-xr-x 2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 5 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+-rw-r--r-- 1 mubashir mubashir 3.2K Mon Jul-20-2026 12:59 useAuth.ts
+
+./frontend/src/features/auth/pages:
+total 32K
+drwxr-xr-x 2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 5 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+-rw-r--r-- 1 mubashir mubashir 3.8K Mon Jul-20-2026 12:59 ChangePasswordPage.tsx
+-rw-r--r-- 1 mubashir mubashir 3.3K Mon Jul-20-2026 12:59 ForgotPasswordPage.tsx
+-rw-r--r-- 1 mubashir mubashir 3.7K Mon Jul-20-2026 12:59 LoginPage.tsx
+-rw-r--r-- 1 mubashir mubashir 5.4K Mon Jul-20-2026 12:59 RegisterPage.tsx
+-rw-r--r-- 1 mubashir mubashir 3.8K Mon Jul-20-2026 12:59 ResetPasswordPage.tsx
+
+./frontend/src/features/dashboard:
+total 20K
+drwxr-xr-x 4 mubashir mubashir 4.0K Wed Jul-22-2026 17:36 .
+drwxr-xr-x 9 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+-rw-r--r-- 1 mubashir mubashir 1.6K Mon Jul-20-2026 12:59 DashboardPlaceholderPage.tsx
+drwxrwxr-x 2 mubashir mubashir 4.0K Wed Jul-22-2026 17:36 hooks
+drwxrwxr-x 2 mubashir mubashir 4.0K Wed Jul-22-2026 17:37 pages
+
+./frontend/src/features/dashboard/hooks:
+total 12K
+drwxrwxr-x 2 mubashir mubashir 4.0K Wed Jul-22-2026 17:36 .
+drwxr-xr-x 4 mubashir mubashir 4.0K Wed Jul-22-2026 17:36 ..
+-rw-rw-r-- 1 mubashir mubashir  280 Wed Jul-22-2026 17:35 useDashboard.ts
+
+./frontend/src/features/dashboard/pages:
+total 16K
+drwxrwxr-x 2 mubashir mubashir 4.0K Wed Jul-22-2026 17:37 .
+drwxr-xr-x 4 mubashir mubashir 4.0K Wed Jul-22-2026 17:36 ..
+-rw-rw-r-- 1 mubashir mubashir 5.7K Wed Jul-22-2026 17:37 DashboardPage.tsx
+
+./frontend/src/features/diagnostics:
+total 16K
+drwxr-xr-x 4 mubashir mubashir 4.0K Wed Jul-22-2026 17:40 .
+drwxr-xr-x 9 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+drwxrwxr-x 2 mubashir mubashir 4.0K Wed Jul-22-2026 17:40 hooks
+drwxrwxr-x 2 mubashir mubashir 4.0K Wed Jul-22-2026 17:40 pages
+
+./frontend/src/features/diagnostics/hooks:
+total 12K
+drwxrwxr-x 2 mubashir mubashir 4.0K Wed Jul-22-2026 17:40 .
+drwxr-xr-x 4 mubashir mubashir 4.0K Wed Jul-22-2026 17:40 ..
+-rw-rw-r-- 1 mubashir mubashir  452 Wed Jul-22-2026 17:40 useDiagnostics.ts
+
+./frontend/src/features/diagnostics/pages:
+total 16K
+drwxrwxr-x 2 mubashir mubashir 4.0K Wed Jul-22-2026 17:40 .
+drwxr-xr-x 4 mubashir mubashir 4.0K Wed Jul-22-2026 17:40 ..
+-rw-rw-r-- 1 mubashir mubashir 4.9K Wed Jul-22-2026 17:40 DiagnosticsPage.tsx
+
+./frontend/src/features/numbering:
+total 8.0K
+drwxr-xr-x 2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 9 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+
+./frontend/src/features/reports:
+total 8.0K
+drwxr-xr-x 2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 9 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+
+./frontend/src/hooks:
+total 12K
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 15 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+-rw-r--r--  1 mubashir mubashir 1.2K Mon Jul-20-2026 12:59 useSessionBootstrap.ts
+
+./frontend/src/layouts:
+total 16K
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 15 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+-rw-r--r--  1 mubashir mubashir  752 Mon Jul-20-2026 12:59 AppLayout.tsx
+-rw-r--r--  1 mubashir mubashir 3.4K Mon Jul-20-2026 12:59 AuthLayout.tsx
+
+./frontend/src/lib:
+total 24K
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 15 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+-rw-r--r--  1 mubashir mubashir 4.2K Mon Jul-20-2026 12:59 apiClient.ts
+-rw-r--r--  1 mubashir mubashir  647 Mon Jul-20-2026 12:59 queryClient.ts
+-rw-r--r--  1 mubashir mubashir  169 Mon Jul-20-2026 12:59 utils.ts
+
+./frontend/src/pages:
+total 16K
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 15 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+-rw-r--r--  1 mubashir mubashir  494 Mon Jul-20-2026 12:59 NotFoundPage.tsx
+-rw-r--r--  1 mubashir mubashir  509 Mon Jul-20-2026 12:59 UnauthorizedPage.tsx
+
+./frontend/src/routes:
+total 24K
+drwxr-xr-x  2 mubashir mubashir 4.0K Wed Jul-22-2026 17:42 .
+drwxr-xr-x 15 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+-rw-r--r--  1 mubashir mubashir  639 Mon Jul-20-2026 12:59 ProtectedRoute.tsx
+-rw-r--r--  1 mubashir mubashir  502 Mon Jul-20-2026 12:59 PublicRoute.tsx
+-rw-r--r--  1 mubashir mubashir  716 Tue Jul-21-2026 12:13 RequirePermission.tsx
+-rw-rw-r--  1 mubashir mubashir 2.3K Wed Jul-22-2026 17:41 index.tsx
+
+./frontend/src/services:
+total 12K
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 15 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+-rw-r--r--  1 mubashir mubashir 1.5K Mon Jul-20-2026 12:59 tokenService.ts
+
+./frontend/src/store:
+total 20K
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 15 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+-rw-r--r--  1 mubashir mubashir 1.1K Mon Jul-20-2026 12:59 authStore.ts
+-rw-r--r--  1 mubashir mubashir 1.5K Mon Jul-20-2026 12:59 notificationStore.ts
+-rw-r--r--  1 mubashir mubashir  844 Mon Jul-20-2026 12:59 themeStore.ts
+
+./frontend/src/types:
+total 20K
+drwxr-xr-x  2 mubashir mubashir 4.0K Tue Jul-21-2026 12:11 .
+drwxr-xr-x 15 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
+-rw-r--r--  1 mubashir mubashir 2.6K Tue Jul-21-2026 12:11 admin.ts
+-rw-r--r--  1 mubashir mubashir 1.6K Mon Jul-20-2026 12:59 auth.ts
+-rw-r--r--  1 mubashir mubashir  242 Tue Jul-21-2026 12:11 index.ts
+
+./frontend/src/utils:
+total 8.0K
+drwxr-xr-x  2 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 .
+drwxr-xr-x 15 mubashir mubashir 4.0K Mon Jul-20-2026 12:59 ..
