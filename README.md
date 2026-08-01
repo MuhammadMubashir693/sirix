@@ -26,10 +26,6 @@ docker compose exec backend npm run seed
 ```
 Then log in at http://localhost:3000/login with `admin@sirix.io` / `Admin@12345` (change this immediately).
 
-## Why the previous setup 502'd
-
-The earlier two-repo setup required manually creating a shared Docker network and starting the backend *before* the frontend, in the right order, by hand. If that network didn't exist yet or the backend wasn't actually ready (not just "started" — Mongo takes a few seconds to accept connections), the frontend's proxy would get connection-refused from the backend and Vite would surface that as a `502`. That's a setup fragility, not something you did incorrect — this unified compose file removes the manual steps entirely and uses real health checks so nothing starts before its dependencies are actually ready.
-
 ## Running services individually (without Docker)
 
 If you'd rather run Node directly on your host and only containerize the databases:
