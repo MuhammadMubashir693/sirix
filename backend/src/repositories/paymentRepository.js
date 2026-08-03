@@ -1,3 +1,4 @@
+const mongoose = require('mongoose');
 const BaseRepository = require('./BaseRepository');
 const Payment = require('../models/Payment');
 
@@ -45,8 +46,9 @@ class PaymentRepository extends BaseRepository {
     });
   }
 
-  async totalCollected({ from, to } = {}) {
+  async totalCollected({ from, to, invoice } = {}) {
     const match = { status: 'completed' };
+    if (invoice) match.invoice = new mongoose.Types.ObjectId(String(invoice));
     if (from || to) {
       match.paidAt = {};
       if (from) match.paidAt.$gte = new Date(from);

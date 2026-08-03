@@ -16,6 +16,25 @@ function computeTotals({ lineItems, tax = 0, discount = 0 }) {
   return { subtotal, totalAmount };
 }
 
+/**
+ * Recomputes an invoice's amountPaid from the payments that still reference it,
+ * so deleting or editing a payment can't leave the invoice overstated.
+ */
+async function syncInvoicePaidState(invoiceId, userId) {
+  const invoice = await invoiceRepository.findById(invoiceId);
+  if (!invoice) return null;
+
+  const { total } = await paymentRepository.totalCollected({ invoice: invoiceId });
+  const amountPaid = Number(total.toFixed(2));
+
+  let status = invoice.status;
+  if (amountPaid >= invoice.totalAmount && invoice.totalAmount > 0) status = 'paid';
+  else if (amountPaid > 0) status = 'partially_paid';
+  else if (status === 'paid' || status === 'partially_paid') status = 'pending';
+
+  return invoiceRepository.updateById(invoiceId, { amountPaid, status }, userId);
+}
+
 // --- Invoices ---
 
 async function listInvoices(query) {
@@ -103,18 +122,7 @@ async function createPayment(payload, userId) {
     updatedBy: userId,
   });
 
-  if (payment.status === 'completed') {
-    const updated = await invoiceRepository.incrementAmountPaid(invoice._id, payment.amount);
-    const nextStatus =
-      updated.amountPaid >= updated.totalAmount
-        ? 'paid'
-        : updated.amountPaid > 0
-        ? 'partially_paid'
-        : updated.status;
-    if (nextStatus !== updated.status) {
-      await invoiceRepository.updateById(invoice._id, { status: nextStatus }, userId);
-    }
-  }
+  await syncInvoicePaidState(invoice._id, userId);
 
   return payment;
 }
@@ -122,12 +130,14 @@ async function createPayment(payload, userId) {
 async function updatePayment(id, payload, userId) {
   const payment = await paymentRepository.updateById(id, payload, userId);
   if (!payment) throw ApiError.notFound('Payment not found');
+  await syncInvoicePaidState(payment.invoice, userId);
   return payment;
 }
 
 async function deletePayment(id, userId) {
   const payment = await paymentRepository.softDeleteById(id, userId);
   if (!payment) throw ApiError.notFound('Payment not found');
+  await syncInvoicePaidState(payment.invoice, userId);
   return payment;
 }
 
