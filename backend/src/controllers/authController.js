@@ -9,7 +9,7 @@ function refreshCookieOptions() {
   return {
     httpOnly: true,
     secure: env.isProd,
-    sameSite: 'strict',
+    sameSite: env.isProd ? 'none' : 'strict', // was always 'strict'
     path: `${env.apiPrefix}/auth`,
     maxAge: 7 * 24 * 60 * 60 * 1000,
   };

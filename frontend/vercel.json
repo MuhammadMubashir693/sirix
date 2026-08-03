@@ -3,6 +3,10 @@
     {
       "source": "/api/(.*)",
       "destination": "https://YOUR_RENDER_BACKEND_URL/api/$1"
+    },
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/index.html"
     }
   ]
 }
