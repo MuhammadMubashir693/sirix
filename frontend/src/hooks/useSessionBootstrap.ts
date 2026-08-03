@@ -19,14 +19,26 @@ export function useSessionBootstrap() {
       const accessToken = tokenService.getAccessToken();
       const refreshToken = tokenService.getRefreshToken();
 
-      if (!accessToken || !refreshToken) {
+      if (!refreshToken) {
         setInitializing(false);
         return;
       }
 
       try {
-        const user = await authApi.me();
-        if (!cancelled) setSession(user, { accessToken, refreshToken });
+        if (accessToken) {
+          try {
+            const user = await authApi.me();
+            if (!cancelled) setSession(user, { accessToken, refreshToken });
+            return;
+          } catch {
+            // Access token may be expired; attempt refresh if a refresh token exists.
+          }
+        }
+
+        const refreshed = await authApi.refresh(refreshToken);
+        if (!cancelled) {
+          setSession(refreshed.user, { accessToken: refreshed.accessToken, refreshToken: refreshed.refreshToken });
+        }
       } catch {
         if (!cancelled) clearSession();
       }

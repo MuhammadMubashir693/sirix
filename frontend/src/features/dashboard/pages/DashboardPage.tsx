@@ -121,9 +121,9 @@ export const DashboardPage: React.FC = () => {
                     <td className="px-4 py-2.5 font-medium text-gray-900 dark:text-white">
                       {log.action}
                     </td>
-                    <td className="px-4 py-2.5 text-gray-600 dark:text-gray-300">{log.entity}</td>
+                    <td className="px-4 py-2.5 text-gray-600 dark:text-gray-300">{log.module}</td>
                     <td className="px-4 py-2.5 text-gray-600 dark:text-gray-300">
-                      {log.userId?.username || 'System'}
+                      {log.user ? `${log.user.firstName} ${log.user.lastName}` : 'System'}
                     </td>
                     <td className="px-4 py-2.5 text-xs text-gray-400">
                       {new Date(log.createdAt).toLocaleString()}

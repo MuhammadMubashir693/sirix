@@ -1,8 +1,6 @@
 import { NavLink, useLocation } from 'react-router-dom';
 import {
   LayoutDashboard,
-  Activity,
-  Hash,
   Stethoscope,
   Wallet,
   FileBarChart,
@@ -21,8 +19,6 @@ interface NavItem {
 // Items beyond Dashboard route to placeholder paths; they'll light up as later modules ship.
 const navItems: NavItem[] = [
   { label: 'Dashboard', to: '/dashboard', icon: LayoutDashboard },
-  { label: 'Relationship Performance', to: '/relationship-performance', icon: Activity, disabled: true },
-  { label: 'Numbering', to: '/numbering', icon: Hash, disabled: true },
   { label: 'Diagnostics', to: '/diagnostics', icon: Stethoscope },
   { label: 'Accounting', to: '/accounting', icon: Wallet },
   { label: 'Reports', to: '/reports', icon: FileBarChart },
@@ -82,18 +78,6 @@ export function Sidebar({ open, onClose }: SidebarProps) {
         <nav className="flex-1 space-y-1 overflow-y-auto p-3">
           {navItems.map((item) => {
             const Icon = item.icon;
-            if (item.disabled) {
-              return (
-                <div
-                  key={item.label}
-                  className="flex cursor-not-allowed items-center gap-3 rounded-lg px-3 py-2 text-sm text-ink-400"
-                  title="Coming in a future module"
-                >
-                  <Icon className="size-4.5" />
-                  {item.label}
-                </div>
-              );
-            }
             return (
               <NavLink
                 key={item.label}

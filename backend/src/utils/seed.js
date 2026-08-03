@@ -25,7 +25,7 @@ const MODULES = [
   'settings',
   'sessions',
 ];
-const ACTIONS = ['create', 'read', 'update', 'delete', 'manage', 'export'];
+const ACTIONS = ['create', 'read', 'update', 'delete', 'manage', 'export', 'execute'];
 
 const ROLE_DEFINITIONS = {
   Admin: () => true, // all permissions

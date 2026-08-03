@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const os = require('os');
-const redisClient = require('../config/redis');
+const { getRedisClient } = require('../config/redis');
 
 class DiagnosticsService {
   async getSystemDiagnostics() {
@@ -22,7 +22,8 @@ class DiagnosticsService {
     let redisStatus = 'healthy';
     try {
       const redisStart = Date.now();
-      if (redisClient && redisClient.isOpen) {
+      const redisClient = getRedisClient();
+      if (redisClient && redisClient.status === 'ready') {
         await redisClient.ping();
         redisLatencyMs = Date.now() - redisStart;
       } else {
@@ -88,7 +89,7 @@ class DiagnosticsService {
       }
       case 'redis_ping': {
         const start = Date.now();
-        await redisClient.ping();
+        await getRedisClient().ping();
         return { success: true, latencyMs: Date.now() - start, details: 'Redis cache responsive' };
       }
       case 'memory_check': {

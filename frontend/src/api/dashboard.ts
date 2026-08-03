@@ -19,10 +19,11 @@ export interface DashboardMetrics {
   recentAuditLogs: Array<{
     _id: string;
     action: string;
-    entity: string;
+    module: string;
     createdAt: string;
-    userId?: {
-      username: string;
+    user?: {
+      firstName: string;
+      lastName: string;
       email: string;
     };
   }>;

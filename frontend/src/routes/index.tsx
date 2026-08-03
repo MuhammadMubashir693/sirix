@@ -7,6 +7,8 @@ import { PublicRoute } from './PublicRoute';
 
 import LoginPage from '../features/auth/pages/LoginPage';
 import RegisterPage from '../features/auth/pages/RegisterPage';
+import ProfilePage from '../features/auth/pages/ProfilePage';
+import ChangePasswordPage from '../features/auth/pages/ChangePasswordPage';
 import { DashboardPage } from '../features/dashboard/pages/DashboardPage';
 import { DiagnosticsPage } from '../features/diagnostics/pages/DiagnosticsPage';
 import { AccountingPage } from '../features/accounting/pages/AccountingPage';
@@ -40,6 +42,8 @@ export const AppRoutes: React.FC = () => {
         <Route element={<AppLayout />}>
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
           <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/settings/change-password" element={<ChangePasswordPage />} />
           <Route path="/diagnostics" element={<DiagnosticsPage />} />
           <Route path="/accounting" element={<AccountingPage />} />
           <Route path="/reports" element={<ReportsPage />} />

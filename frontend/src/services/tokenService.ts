@@ -14,6 +14,16 @@ class TokenService {
     this.storage = rememberMe ? localStorage : sessionStorage;
   }
 
+  private getPreferredStorage(): Storage {
+    if (localStorage.getItem(REFRESH_TOKEN_KEY) || localStorage.getItem(ACCESS_TOKEN_KEY)) {
+      return localStorage;
+    }
+    if (sessionStorage.getItem(REFRESH_TOKEN_KEY) || sessionStorage.getItem(ACCESS_TOKEN_KEY)) {
+      return sessionStorage;
+    }
+    return this.storage;
+  }
+
   getAccessToken(): string | null {
     return localStorage.getItem(ACCESS_TOKEN_KEY) || sessionStorage.getItem(ACCESS_TOKEN_KEY);
   }
@@ -23,12 +33,13 @@ class TokenService {
   }
 
   setTokens(accessToken: string, refreshToken: string) {
-    this.storage.setItem(ACCESS_TOKEN_KEY, accessToken);
-    this.storage.setItem(REFRESH_TOKEN_KEY, refreshToken);
+    const target = this.getPreferredStorage();
+    target.setItem(ACCESS_TOKEN_KEY, accessToken);
+    target.setItem(REFRESH_TOKEN_KEY, refreshToken);
   }
 
   updateAccessToken(accessToken: string) {
-    const target = localStorage.getItem(REFRESH_TOKEN_KEY) ? localStorage : sessionStorage;
+    const target = this.getPreferredStorage();
     target.setItem(ACCESS_TOKEN_KEY, accessToken);
   }
 

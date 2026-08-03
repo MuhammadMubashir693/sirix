@@ -4,7 +4,10 @@ const asyncHandler = require('../utils/asyncHandler');
 
 const getDashboardMetrics = asyncHandler(async (req, res) => {
   const metrics = await dashboardService.getMetrics();
-  return apiResponse.success(res, 'Dashboard metrics retrieved successfully', metrics);
+  return apiResponse.success(res, {
+    message: 'Dashboard metrics retrieved successfully',
+    data: metrics,
+  });
 });
 
 module.exports = {

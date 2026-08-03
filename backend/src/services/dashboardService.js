@@ -3,12 +3,12 @@ const Role = require('../models/Role');
 const AuditLog = require('../models/AuditLog');
 const RefreshToken = require('../models/RefreshToken');
 const mongoose = require('mongoose');
-const redisClient = require('../config/redis');
+const { getRedisClient } = require('../config/redis');
 
 class DashboardService {
   async getMetrics() {
     const totalUsers = await User.countDocuments();
-    const activeUsers = await User.countDocuments({ status: 'active' });
+    const activeUsers = await User.countDocuments({ isActive: true });
     const totalRoles = await Role.countDocuments();
 
     const activeSessions = await RefreshToken.countDocuments({
@@ -19,11 +19,10 @@ class DashboardService {
     const recentAuditLogs = await AuditLog.find()
       .sort({ createdAt: -1 })
       .limit(5)
-      .populate('userId', 'username email');
+      .populate('user', 'firstName lastName email');
 
     const roleDistribution = await User.aggregate([
-      { $unwind: '$roles' },
-      { $group: { _id: '$roles', count: { $sum: 1 } } },
+      { $group: { _id: '$role', count: { $sum: 1 } } },
       {
         $lookup: {
           from: 'roles',
@@ -38,7 +37,8 @@ class DashboardService {
 
     let redisStatus = 'healthy';
     try {
-      if (redisClient && redisClient.isOpen) {
+      const redisClient = getRedisClient();
+      if (redisClient && redisClient.status === 'ready') {
         await redisClient.ping();
       } else {
         redisStatus = 'degraded';

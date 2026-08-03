@@ -76,7 +76,15 @@ export default function LoginPage() {
               type="checkbox"
               checked={rememberMe}
               onChange={(e) => setRememberMe(e.target.checked)}
-              className="size-4 rounded border-border-strong text-brand-600 focus-visible:ring-2 focus-visible:ring-brand-500"
+              className="size-4 shrink-0 appearance-none rounded border border-border-strong bg-white checked:border-brand-600 checked:bg-brand-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2"
+              style={{
+                backgroundImage: rememberMe
+                  ? "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='white' stroke-width='2'%3E%3Cpath d='M3 8l3.5 3.5L13 5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E\")"
+                  : undefined,
+                backgroundSize: '0.65rem',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+              }}
             />
             Remember me
           </label>

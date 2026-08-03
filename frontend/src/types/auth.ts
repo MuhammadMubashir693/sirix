@@ -51,6 +51,10 @@ export interface AuthTokens {
   refreshToken: string;
 }
 
+export interface RefreshResponseData extends AuthTokens {
+  user: User;
+}
+
 export interface LoginPayload {
   email: string;
   password: string;

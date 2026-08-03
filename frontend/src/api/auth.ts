@@ -7,7 +7,7 @@ import type {
   ForgotPasswordPayload,
   ResetPasswordPayload,
   LoginResponseData,
-  AuthTokens,
+  RefreshResponseData,
 } from '@/types';
 
 export const authApi = {
@@ -18,7 +18,7 @@ export const authApi = {
     apiRequest<LoginResponseData>({ method: 'POST', url: '/auth/login', data: payload }),
 
   refresh: (refreshToken: string) =>
-    apiRequest<AuthTokens>({ method: 'POST', url: '/auth/refresh', data: { refreshToken } }),
+    apiRequest<RefreshResponseData>({ method: 'POST', url: '/auth/refresh', data: { refreshToken } }),
 
   logout: (refreshToken: string | null) =>
     apiRequest<null>({ method: 'POST', url: '/auth/logout', data: { refreshToken } }),
