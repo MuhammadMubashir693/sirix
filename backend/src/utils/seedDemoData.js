@@ -83,13 +83,18 @@ const PAYMENTS = [
   { number: 'PAY-2005', invoice: 'INV-1006', fraction: 0.3, method: 'bank_transfer', status: 'pending', reference: 'FT2024-91880' },
 ];
 
+/**
+ * Carrier payments. Each one names both the carrier whose traffic it settles and
+ * the wholesale vendor it was paid through, so the vendor report isn't full of
+ * "Unassigned vendor" rows.
+ */
 const CARRIER_PAYMENTS = [
-  { number: 'CPY-3001', carrier: 0, monthsAgo: 3, amount: 12_400, method: 'bank_transfer', status: 'completed', reference: 'ATLAS-2024-03' },
-  { number: 'CPY-3002', carrier: 1, monthsAgo: 2, amount: 8_950, method: 'wire', status: 'completed', reference: 'MERID-2024-04' },
+  { number: 'CPY-3001', carrier: 0, vendor: 0, monthsAgo: 3, amount: 12_400, method: 'bank_transfer', status: 'completed', reference: 'ATLAS-2024-03' },
+  { number: 'CPY-3002', carrier: 1, vendor: 1, monthsAgo: 2, amount: 8_950, method: 'wire', status: 'completed', reference: 'MERID-2024-04' },
   { number: 'CPY-3003', vendor: 0, monthsAgo: 2, amount: 6_300, method: 'bank_transfer', status: 'completed', reference: 'PINE-2024-04' },
-  { number: 'CPY-3004', carrier: 2, monthsAgo: 1, amount: 5_180, method: 'bank_transfer', status: 'completed', reference: 'ORION-2024-05' },
+  { number: 'CPY-3004', carrier: 2, vendor: 1, monthsAgo: 1, amount: 5_180, method: 'bank_transfer', status: 'completed', reference: 'ORION-2024-05' },
   { number: 'CPY-3005', vendor: 1, monthsAgo: 1, amount: 4_720, method: 'wire', status: 'completed', reference: 'VRTX-2024-05' },
-  { number: 'CPY-3006', carrier: 0, monthsAgo: 0, amount: 9_640, method: 'bank_transfer', status: 'pending', reference: 'ATLAS-2024-06' },
+  { number: 'CPY-3006', carrier: 0, vendor: 0, monthsAgo: 0, amount: 9_640, method: 'bank_transfer', status: 'pending', reference: 'ATLAS-2024-06' },
 ];
 
 const round2 = (value) => Math.round(value * 100) / 100;
