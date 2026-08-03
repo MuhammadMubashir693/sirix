@@ -72,6 +72,15 @@ npm run seed
 docker compose exec backend npm run seed
 ```
 
+Accounting records can be created from the UI (the Accounting page's Customers/Carriers/Vendors tabs feed the invoice and payment forms) via `/customers`, `/carriers`, `/vendors`, `/invoices`, `/payments`, and `/carrier-payments`. Alternatively, populate the accounting/reports modules with demo data (customers, carriers, vendors, invoices, customer payments, carrier payments spread over the last four months):
+```bash
+npm run seed:demo
+# start from a clean demo dataset instead of updating the existing one:
+npm run seed:demo -- --reset
+# or, if running via Docker:
+docker compose exec backend npm run seed:demo
+```
+
 > The compose file creates a `sirix-network` Docker network. The Sirix frontend's `docker-compose.yml` joins this same network (as external) so it can reach this backend by its service name, `backend`.
 
 Run tests:

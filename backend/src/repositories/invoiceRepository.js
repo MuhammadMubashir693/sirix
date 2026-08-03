@@ -50,10 +50,6 @@ class InvoiceRepository extends BaseRepository {
     return this.model.findOne({ invoiceNumber: invoiceNumber.toUpperCase() });
   }
 
-  async incrementAmountPaid(id, amount) {
-    return this.model.findByIdAndUpdate(id, { $inc: { amountPaid: amount } }, { new: true });
-  }
-
   async summary({ from, to } = {}) {
     const match = {};
     if (from || to) {

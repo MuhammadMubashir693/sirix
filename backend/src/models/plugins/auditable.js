@@ -34,6 +34,14 @@ function auditablePlugin(schema) {
   ['find', 'findOne', 'countDocuments', 'findOneAndUpdate', 'updateMany', 'updateOne'].forEach((method) => {
     schema.pre(method, excludeDeleted);
   });
+
+  // Aggregations bypass query middleware, so soft-deleted docs have to be
+  // filtered out of the pipeline explicitly.
+  schema.pre('aggregate', function excludeDeletedFromPipeline(next) {
+    if (this.options.includeDeleted) return next();
+    this.pipeline().unshift({ $match: { isDeleted: { $ne: true } } });
+    return next();
+  });
 }
 
 module.exports = auditablePlugin;
