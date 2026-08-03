@@ -43,12 +43,12 @@ export default function LoginPage() {
       title="Every carrier relationship, in one signal."
       description="Monitor traffic, reconcile revenue, and manage vendor and customer relationships from a single, unified control plane."
     >
-      <div className="mb-8 space-y-1.5">
-        <h2 className="font-display text-2xl font-semibold text-ink-900">Sign in</h2>
-        <p className="text-sm text-ink-500">Enter your credentials to access your dashboard.</p>
+      <div className="mb-8 space-y-2 rounded-3xl bg-slate-50 p-6 shadow-sm shadow-slate-200/80">
+        <h2 className="font-display text-3xl font-semibold tracking-tight text-slate-900">Sign in</h2>
+        <p className="text-sm leading-6 text-slate-600">Enter your credentials to access your dashboard.</p>
       </div>
 
-      <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-5">
+      <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-6">
         <FormField label="Email address" htmlFor="email" error={errors.email?.message} required>
           <Input
             id="email"
@@ -56,6 +56,7 @@ export default function LoginPage() {
             autoComplete="email"
             placeholder="you@company.com"
             invalid={!!errors.email}
+            className="h-12"
             {...register('email')}
           />
         </FormField>
@@ -66,40 +67,33 @@ export default function LoginPage() {
             autoComplete="current-password"
             placeholder="••••••••"
             invalid={!!errors.password}
+            className="h-12"
             {...register('password')}
           />
         </FormField>
 
-        <div className="flex items-center justify-between text-sm">
-          <label className="flex select-none items-center gap-2 text-ink-700">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between text-sm">
+          <label className="flex select-none items-center gap-2 text-slate-700">
             <input
               type="checkbox"
               checked={rememberMe}
               onChange={(e) => setRememberMe(e.target.checked)}
-              className="size-4 shrink-0 appearance-none rounded border border-border-strong bg-white checked:border-brand-600 checked:bg-brand-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2"
-              style={{
-                backgroundImage: rememberMe
-                  ? "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='white' stroke-width='2'%3E%3Cpath d='M3 8l3.5 3.5L13 5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E\")"
-                  : undefined,
-                backgroundSize: '0.65rem',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-              }}
+              className="h-4 w-4 rounded border border-slate-300 bg-white text-sky-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2"
             />
             Remember me
           </label>
-          <Link to="/forgot-password" className="font-medium text-brand-600 hover:text-brand-700">
+          <Link to="/forgot-password" className="font-medium text-sky-600 hover:text-sky-700">
             Forgot password?
           </Link>
         </div>
 
-        <Button type="submit" className="w-full" loading={loginMutation.isPending}>
+        <Button type="submit" className="w-full py-3" loading={loginMutation.isPending}>
           Sign in
         </Button>
 
-        <p className="text-center text-sm text-ink-500">
+        <p className="text-center text-sm text-slate-500">
           Don't have an account?{' '}
-          <Link to="/register" className="font-medium text-brand-600 hover:text-brand-700">
+          <Link to="/register" className="font-medium text-sky-600 hover:text-sky-700">
             Sign up
           </Link>
         </p>

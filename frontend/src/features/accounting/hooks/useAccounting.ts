@@ -20,8 +20,33 @@ const PAYMENTS_KEY = ['accounting', 'payments'];
 const CARRIER_PAYMENTS_KEY = ['accounting', 'carrier-payments'];
 const DASHBOARD_KEY = ['accounting', 'dashboard'];
 
+function getApiErrorText(errors: Record<string, unknown> | null) {
+  if (!errors) return null;
+
+  const messages: string[] = [];
+
+  const flatten = (value: unknown) => {
+    if (typeof value === 'string') {
+      messages.push(value);
+      return;
+    }
+    if (Array.isArray(value)) {
+      value.forEach(flatten);
+      return;
+    }
+    if (value && typeof value === 'object') {
+      Object.values(value).forEach(flatten);
+    }
+  };
+
+  flatten(errors);
+  return messages[0] ?? null;
+}
+
 function onErrorToast(error: ApiClientError) {
-  toast.error(error.message || 'An error occurred');
+  const validationMessage = getApiErrorText(error.errors);
+  const message = validationMessage ? `${error.message}: ${validationMessage}` : error.message || 'An error occurred';
+  toast.error(message);
 }
 
 // --- Invoices ---
