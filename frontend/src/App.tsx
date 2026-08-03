@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
-import { RouterProvider } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
-import { router } from '@/routes';
+import { AppRoutes } from '@/routes';
 import { useSessionBootstrap } from '@/hooks/useSessionBootstrap';
 import { useAuthStore } from '@/store/authStore';
 import { registerSessionExpiredHandler } from '@/lib/apiClient';
@@ -22,7 +22,9 @@ export default function App() {
 
   return (
     <>
-      <RouterProvider router={router} />
+      <BrowserRouter>
+        <AppRoutes />
+      </BrowserRouter>
       <Toaster
         position="top-right"
         toastOptions={{

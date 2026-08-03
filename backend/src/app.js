@@ -23,11 +23,27 @@ const app = express();
 app.disable('x-powered-by');
 app.set('trust proxy', 1);
 
+function parseAllowedOrigins(value) {
+  return value
+    .split(',')
+    .map((item) => item.trim())
+    .filter(Boolean);
+}
+
+const allowedOrigins = parseAllowedOrigins(env.clientUrl || 'http://localhost:3000');
+
 // Security
 app.use(helmet());
 app.use(
   cors({
-    origin: env.clientUrl,
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+        return;
+      }
+
+      callback(new Error('Not allowed by CORS'));
+    },
     credentials: true,
   })
 );

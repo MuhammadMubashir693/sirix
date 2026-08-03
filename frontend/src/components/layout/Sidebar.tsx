@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import {
   LayoutDashboard,
   Activity,
@@ -23,9 +23,9 @@ const navItems: NavItem[] = [
   { label: 'Dashboard', to: '/dashboard', icon: LayoutDashboard },
   { label: 'Relationship Performance', to: '/relationship-performance', icon: Activity, disabled: true },
   { label: 'Numbering', to: '/numbering', icon: Hash, disabled: true },
-  { label: 'Diagnostics', to: '/diagnostics', icon: Stethoscope, disabled: true },
-  { label: 'Accounting', to: '/accounting', icon: Wallet, disabled: true },
-  { label: 'Reports', to: '/reports', icon: FileBarChart, disabled: true },
+  { label: 'Diagnostics', to: '/diagnostics', icon: Stethoscope },
+  { label: 'Accounting', to: '/accounting', icon: Wallet },
+  { label: 'Reports', to: '/reports', icon: FileBarChart },
   { label: 'Admin', to: '/admin', icon: ShieldCheck },
 ];
 
@@ -35,6 +35,17 @@ interface SidebarProps {
 }
 
 export function Sidebar({ open, onClose }: SidebarProps) {
+  const location = useLocation();
+  const activeItem = navItems.find((item) =>
+    location.pathname === item.to || location.pathname.startsWith(item.to + '/')
+  );
+
+  const moduleLabel = activeItem ? `${activeItem.label}` : 'Sirix';
+  const moduleIndex = activeItem
+    ? navItems.findIndex((item) => item.to === activeItem.to) + 1
+    : undefined;
+  const footerText = moduleIndex ? `Module ${moduleIndex} · ${moduleLabel}` : 'Sirix · Carrier operations';
+
   return (
     <>
       {/* Mobile overlay */}
@@ -102,7 +113,7 @@ export function Sidebar({ open, onClose }: SidebarProps) {
           })}
         </nav>
 
-        <div className="border-t border-border p-4 text-xs text-ink-400">Module 2 · Auth &amp; Admin</div>
+        <div className="border-t border-border p-4 text-xs text-ink-400">{footerText}</div>
       </aside>
     </>
   );

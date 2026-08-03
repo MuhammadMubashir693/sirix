@@ -78,7 +78,7 @@ export const DashboardPage: React.FC = () => {
         <Card className="p-5">
           <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Database Status</p>
           <div className="mt-2 flex items-center space-x-2">
-            <Badge variant={systemHealth.database === 'healthy' ? 'default' : 'destructive'}>
+            <Badge variant={systemHealth.database === 'healthy' ? 'success' : 'danger'}>
               {systemHealth.database.toUpperCase()}
             </Badge>
           </div>
@@ -97,7 +97,7 @@ export const DashboardPage: React.FC = () => {
                 <span className="text-sm font-medium capitalize text-gray-700 dark:text-gray-300">
                   {item.roleName}
                 </span>
-                <Badge variant="outline">{item.count} users</Badge>
+                <Badge variant="brand">{item.count} users</Badge>
               </div>
             ))}
           </div>

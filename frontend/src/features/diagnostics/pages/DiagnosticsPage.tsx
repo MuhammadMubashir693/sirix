@@ -22,7 +22,7 @@ export const DiagnosticsPage: React.FC = () => {
   if (isLoading) return <div className="flex items-center justify-center h-64"><LoadingSpinner /></div>;
   if (isError || !data) return <div className="p-6 text-center text-red-500 font-medium">Failed to retrieve diagnostics.</div>;
 
-  const { services, system, process: proc, responseTimeMs } = data;
+  const { services, system, responseTimeMs } = data;
 
   return (
     <div className="p-6 space-y-6">
@@ -31,14 +31,14 @@ export const DiagnosticsPage: React.FC = () => {
           <h1 className="text-2xl font-bold text-gray-900 dark:text-white">System Diagnostics & Health</h1>
           <p className="text-sm text-gray-500 dark:text-gray-400">Monitor system performance, ping latency, and process execution.</p>
         </div>
-        <Button variant="outline" onClick={() => refetch()}>Refresh Diagnostics</Button>
+        <Button variant="secondary" onClick={() => refetch()}>Refresh Diagnostics</Button>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <Card className="p-5 border-l-4 border-l-indigo-500">
           <h3 className="font-semibold text-gray-700 dark:text-gray-200">MongoDB Database</h3>
           <div className="mt-3 flex items-center justify-between">
-            <Badge variant={services.database.status === 'healthy' ? 'default' : 'destructive'}>{services.database.status.toUpperCase()}</Badge>
+            <Badge variant={services.database.status === 'healthy' ? 'success' : 'danger'}>{services.database.status.toUpperCase()}</Badge>
             <span className="text-sm font-mono text-gray-600 dark:text-gray-300">{services.database.latencyMs} ms</span>
           </div>
         </Card>
@@ -46,7 +46,7 @@ export const DiagnosticsPage: React.FC = () => {
         <Card className="p-5 border-l-4 border-l-emerald-500">
           <h3 className="font-semibold text-gray-700 dark:text-gray-200">Redis Cache</h3>
           <div className="mt-3 flex items-center justify-between">
-            <Badge variant={services.redis.status === 'healthy' ? 'default' : 'destructive'}>{services.redis.status.toUpperCase()}</Badge>
+            <Badge variant={services.redis.status === 'healthy' ? 'success' : 'danger'}>{services.redis.status.toUpperCase()}</Badge>
             <span className="text-sm font-mono text-gray-600 dark:text-gray-300">{services.redis.latencyMs} ms</span>
           </div>
         </Card>
@@ -54,7 +54,7 @@ export const DiagnosticsPage: React.FC = () => {
         <Card className="p-5 border-l-4 border-l-blue-500">
           <h3 className="font-semibold text-gray-700 dark:text-gray-200">API Latency</h3>
           <div className="mt-3 flex items-center justify-between">
-            <Badge variant="outline">HEALTHY</Badge>
+            <Badge variant="brand">HEALTHY</Badge>
             <span className="text-sm font-mono text-gray-600 dark:text-gray-300">{responseTimeMs} ms</span>
           </div>
         </Card>
@@ -79,9 +79,9 @@ export const DiagnosticsPage: React.FC = () => {
         <Card className="p-5">
           <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4">Interactive Diagnostic Tests</h2>
           <div className="flex flex-wrap gap-2">
-            <Button variant="outline" size="sm" onClick={() => handleTest('db_ping')} disabled={runTestMutation.isPending}>Test DB Ping</Button>
-            <Button variant="outline" size="sm" onClick={() => handleTest('redis_ping')} disabled={runTestMutation.isPending}>Test Redis Ping</Button>
-            <Button variant="outline" size="sm" onClick={() => handleTest('memory_check')} disabled={runTestMutation.isPending}>Check Memory</Button>
+            <Button variant="secondary" size="sm" onClick={() => handleTest('db_ping')} disabled={runTestMutation.isPending}>Test DB Ping</Button>
+            <Button variant="secondary" size="sm" onClick={() => handleTest('redis_ping')} disabled={runTestMutation.isPending}>Test Redis Ping</Button>
+            <Button variant="secondary" size="sm" onClick={() => handleTest('memory_check')} disabled={runTestMutation.isPending}>Check Memory</Button>
           </div>
           {testResult && (
             <div className="mt-4 p-3 bg-gray-50 dark:bg-gray-800 rounded-md text-xs font-mono">

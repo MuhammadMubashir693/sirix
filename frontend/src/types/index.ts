@@ -1,5 +1,6 @@
 export * from './auth';
 export * from './admin';
+export * from './accounting';
 
 /** Normalized shape thrown by the API client for any failed request. */
 export interface ApiClientError {
