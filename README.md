@@ -26,10 +26,13 @@ docker compose exec backend npm run seed
 ```
 Then log in at http://localhost:3000/login with `admin@sirix.io` / `Admin@12345` (change this immediately).
 
-The Accounting and Reports pages are empty on a fresh database — that seed only creates roles, permissions, and the admin user. To fill them with demo customers, carriers, vendors, invoices, and payments:
-```bash
-docker compose exec backend npm run seed:demo    # add `-- --reset` to rebuild the demo dataset from scratch
-```
+The Accounting and Reports pages are empty on a fresh database — that seed only creates roles, permissions, and the admin user. There are two ways to fill them:
+
+1. **From the UI.** On the Accounting page, add a customer under the Customers tab (and a carrier/vendor if you pay them), then create invoices, customer payments, and carrier payments from the corresponding tabs. Reports derive entirely from those records.
+2. **From a seed script**, for a realistic dataset spread over the last four months:
+   ```bash
+   docker compose exec backend npm run seed:demo    # add `-- --reset` to rebuild the demo dataset from scratch
+   ```
 
 ## Running services individually (without Docker)
 

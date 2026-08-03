@@ -8,6 +8,8 @@ import { PublicRoute } from './PublicRoute';
 import LoginPage from '../features/auth/pages/LoginPage';
 import RegisterPage from '../features/auth/pages/RegisterPage';
 import ProfilePage from '../features/auth/pages/ProfilePage';
+import ForgotPasswordPage from '../features/auth/pages/ForgotPasswordPage';
+import ResetPasswordPage from '../features/auth/pages/ResetPasswordPage';
 import ChangePasswordPage from '../features/auth/pages/ChangePasswordPage';
 import { DashboardPage } from '../features/dashboard/pages/DashboardPage';
 import { DiagnosticsPage } from '../features/diagnostics/pages/DiagnosticsPage';
@@ -36,6 +38,10 @@ export const AppRoutes: React.FC = () => {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
         </Route>
+
+        {/* These pages render their own AuthLayout with recovery-specific copy. */}
+        <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+        <Route path="/reset-password" element={<ResetPasswordPage />} />
       </Route>
 
       <Route element={<ProtectedRoute />}>
